@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Магистратура 09.04.01 | Мехатроника и робототехника | УГНТУ</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Магистерская программа по мехатронике и робототехнике. Подготовка специалистов в области промышленной робототехники, систем управления, автоматизации и интеллектуальных мехатронных систем.">
+    <meta name="keywords" content="мехатроника, робототехника, промышленные роботы, KUKA, Siemens, автоматизация, магистратура, УГНТУ, системы управления">
+    
+    <!-- Google Fonts + Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'robot-primary': '#DC2626',
+                        'robot-secondary': '#7F1A1A',
+                        'robot-dark': '#1F2937',
+                        'robot-accent': '#F59E0B',
+                        'robot-slate': '#374151',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.6s ease-out',
+                        'slide-up': 'slideUp 0.5s ease-out',
+                        'pulse-slow': 'pulseSlow 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(100%)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        pulseSlow: {
+                            '0%, 100%': { opacity: '0.3', transform: 'scale(1)' },
+                            '50%': { opacity: '0.6', transform: 'scale(1.05)' },
+                        },
+                    },
+                },
+            },
+        }
+    </script>
+    
+    <style>
+        * {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .gradient-robot {
+            background: linear-gradient(135deg, #1F2937 0%, #374151 50%, #DC2626 100%);
+        }
+        .hover-lift {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 30px -12px rgba(220, 38, 38, 0.2);
+        }
+        .robot-bg-pattern {
+            background-image: radial-gradient(circle at 10% 20%, rgba(220, 38, 38, 0.05) 0%, rgba(31, 41, 55, 0.02) 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 antialiased">
+
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm">
+        <nav class="max-w-7xl mx-auto px-6 md:px-8 py-4 flex flex-wrap items-center justify-between gap-4">
+            <div class="flex items-center gap-2">
+                <span class="material-icons text-robot-primary text-2xl">smart_toy</span>
+                <span class="font-bold text-lg tracking-tight text-gray-800">MSc <span class="text-robot-primary">| Robotics</span></span>
+            </div>
+            <div class="flex gap-6 text-sm font-medium">
+                <a href="#program" class="hidden md:inline-block text-gray-600 hover:text-robot-primary transition">О программе</a>
+                <a href="#curriculum" class="hidden md:inline-block text-gray-600 hover:text-robot-primary transition">Учебный план</a>
+                <a href="#career" class="hidden md:inline-block text-gray-600 hover:text-robot-primary transition">Карьера</a>
+                <a href="#apply" class="bg-robot-primary text-white px-5 py-2 rounded-full text-sm font-semibold shadow-md hover:bg-robot-secondary transition flex items-center gap-1">
+                    <span class="material-icons text-sm">description</span>
+                    <span>Подать заявку</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="gradient-robot text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-black/20"></div>
+        <!-- Industrial robot pattern decoration -->
+        <div class="absolute top-20 right-10 opacity-10 hidden lg:block">
+            <svg width="200" height="200" viewBox="0 0 100 100" fill="none">
+                <rect x="35" y="20" width="30" height="40" stroke="white" stroke-width="2" fill="none"/>
+                <rect x="45" y="15" width="10" height="10" stroke="white" stroke-width="1.5" fill="none"/>
+                <circle cx="50" cy="70" r="12" stroke="white" stroke-width="2" fill="none"/>
+                <line x1="35" y1="30" x2="20" y2="40" stroke="white" stroke-width="2"/>
+                <line x1="65" y1="30" x2="80" y2="40" stroke="white" stroke-width="2"/>
+                <line x1="50" y1="60" x2="50" y2="85" stroke="white" stroke-width="2"/>
+            </svg>
+        </div>
+        <div class="relative max-w-7xl mx-auto px-6 md:px-8 py-16 lg:py-24">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 text-center lg:text-left animate-fade-in">
+                    <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-1.5 text-sm font-medium border border-white/20">
+                        <span class="material-icons text-sm">settings</span>
+                        <span>Магистратура будущего</span>
+                        <span class="w-1 h-1 bg-white/50 rounded-full"></span>
+                        <span>Интеллектуальные системы</span>
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
+                        Мехатроника и<br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-300 to-red-200">робототехника</span>
+                    </h1>
+                    <p class="text-xl text-gray-200 max-w-2xl mx-auto lg:mx-0">
+                        Подготовка специалистов в области мехатроники, робототехники и интеллектуальных систем управления
+                    </p>
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-3 pt-2">
+                        <div class="bg-white/10 backdrop-blur-sm rounded-2xl px-5 py-2 flex items-center gap-2">
+                            <span class="material-icons">school</span>
+                            <span class="font-semibold">09.04.01</span>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-2xl px-5 py-2 flex items-center gap-2">
+                            <span class="material-icons">precision_manufacturing</span>
+                            <span>Промышленная робототехника</span>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-2xl px-5 py-2 flex items-center gap-2">
+                            <span class="material-icons">memory</span>
+                            <span>KUKA | Siemens | Mitsubishi</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-4 justify-center lg:justify-start pt-4">
+                        <a href="#curriculum" class="bg-white text-robot-primary hover:bg-gray-100 font-bold px-8 py-3 rounded-full transition-all shadow-lg hover:shadow-xl inline-flex items-center gap-2">
+                            <span class="material-icons">menu_book</span>
+                            <span>Учебный план</span>
+                        </a>
+                        <a href="#program" class="bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/40 text-white font-medium px-7 py-3 rounded-full transition-all inline-flex items-center gap-2">
+                            <span class="material-icons">info</span>
+                            <span>О программе</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-6 w-full max-w-sm shadow-2xl border border-white/20">
+                        <div class="text-center mb-4">
+                            <span class="material-icons text-6xl text-orange-300">smart_toy</span>
+                        </div>
+                        <p class="text-center font-semibold text-xl">Промышленная робототехника</p>
+                        <p class="text-center text-sm text-gray-200">KUKA · Siemens · Mitsubishi · ICP DAS</p>
+                        <hr class="my-3 border-white/20">
+                        <div class="flex justify-between text-sm">
+                            <div class="flex items-center gap-1"><span class="material-icons text-sm">today</span> <span>2 года</span></div>
+                            <div class="flex items-center gap-1"><span class="material-icons text-sm">groups</span> <span>Очная форма</span></div>
+                            <div class="flex items-center gap-1"><span class="material-icons text-sm">engineering</span> <span>Инженер-робототехник</span></div>
+                        </div>
+                        <div class="mt-4 flex justify-center gap-2 text-xs text-gray-200">
+                            <span>🤖 KUKA</span>
+                            <span>⚙️ Siemens</span>
+                            <span>🔧 Mitsubishi</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
+            <svg viewBox="0 0 1200 100" preserveAspectRatio="none" class="relative block w-full h-8 md:h-12">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="white" opacity=".3"></path>
+                <path d="M0,0V15.81C13,21.25,27.93,25.67,44.24,28.45c69.76,10.19,140.09,9.45,210.06-1.45,69-10.73,136.2-30.58,206.52-35.28C532.38,11.89,612.3,25.61,691.46,38.75c79.16,13.14,158.1,15.55,237.33,6.55,46-5.25,90.43-17.89,135.22-31.42C1091,7.78,1155.52,0,1200,0V0Z" fill="white"></path>
+            </svg>
+        </div>
+    </section>
+
+    <main class="max-w-7xl mx-auto px-6 md:px-8 py-16 lg:py-20 robot-bg-pattern">
+        <!-- Program Description -->
+        <div id="program" class="scroll-mt-24 mb-20">
+            <div class="grid lg:grid-cols-3 gap-10">
+                <div class="lg:col-span-2 space-y-5">
+                    <div class="inline-flex items-center gap-2 bg-red-50 text-robot-primary px-3 py-1 rounded-full text-sm font-semibold">
+                        <span class="material-icons text-sm">settings</span>
+                        <span>Аккредитованная программа</span>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Подготовка лидеров в области мехатроники и робототехники</h2>
+                    <p class="text-gray-600 leading-relaxed text-lg">Программа направлена на подготовку специалистов, способных разрабатывать новые методы управления, обработки информации и находить новые конструктивные решения мехатронных и робототехнических систем широкого назначения, их подсистем и отдельных модулей. В образовательном процессе применяется современное оборудование, например, промышленные роботы KUKA, контроллеры и компоненты Siemens, Mitsubishi, ICP DAS, Balluff и другие.</p>
+                    <div class="grid sm:grid-cols-2 gap-4 pt-2">
+                        <div class="flex items-start gap-3 bg-white p-5 rounded-2xl shadow-md border border-gray-100 hover-lift">
+                            <span class="material-icons text-robot-primary text-2xl">precision_manufacturing</span>
+                            <div><h4 class="font-bold">Промышленная робототехника</h4><p class="text-gray-500 text-sm">Работа с промышленными роботами KUKA, программирование и интеграция</p></div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-white p-5 rounded-2xl shadow-md border border-gray-100 hover-lift">
+                            <span class="material-icons text-robot-primary text-2xl">memory</span>
+                            <div><h4 class="font-bold">Современное оборудование</h4><p class="text-gray-500 text-sm">Siemens, Mitsubishi, ICP DAS, Balluff — реальные промышленные контроллеры</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-gray-50 to-red-50 p-7 rounded-3xl shadow-md border border-red-100">
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="material-icons text-robot-primary text-2xl">workspace_premium</span>
+                        <h3 class="text-xl font-bold text-gray-800">Ключевые преимущества</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex gap-2 items-start"><span class="material-icons text-red-600 text-sm">check_circle</span><span>Разработка мехатронных систем</span></li>
+                        <li class="flex gap-2 items-start"><span class="material-icons text-red-600 text-sm">check_circle</span><span>Промышленные роботы KUKA</span></li>
+                        <li class="flex gap-2 items-start"><span class="material-icons text-red-600 text-sm">check_circle</span><span>Контроллеры Siemens, Mitsubishi</span></li>
+                        <li class="flex gap-2 items-start"><span class="material-icons text-red-600 text-sm">check_circle</span><span>Искусственный интеллект в управлении</span></li>
+                        <li class="flex gap-2 items-start"><span class="material-icons text-red-600 text-sm">check_circle</span><span>Сотрудничество с Роснефтью</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Competencies & Research -->
+        <div class="grid md:grid-cols-2 gap-8 mb-20">
+            <div class="bg-white rounded-3xl p-7 shadow-md border border-gray-100 hover-lift">
+                <span class="material-icons text-robot-primary text-3xl">engineering</span>
+                <h3 class="text-2xl font-bold mt-3 mb-2">Компетенции выпускников</h3>
+                <p class="text-gray-600">Профессиональная деятельность выпускников связана с разработкой новых методов управления, обработки информации и поиска новых конструктивных решений мехатронных и робототехнических систем широкого назначения, их подсистем и отдельных модулей, проведением исследований в области мехатроники, робототехники, теории управления и методов искусственного интеллекта.</p>
+                <div class="flex flex-wrap gap-2 mt-4">
+                    <span class="bg-red-50 text-red-700 px-3 py-1 rounded-full text-sm flex items-center gap-1"><span class="material-icons text-xs">settings</span> Системы управления</span>
+                    <span class="bg-red-50 text-red-700 px-3 py-1 rounded-full text-sm flex items-center gap-1"><span class="material-icons text-xs">smart_toy</span> Промышленные роботы</span>
+                    <span class="bg-red-50 text-red-700 px-3 py-1 rounded-full text-sm flex items-center gap-1"><span class="material-icons text-xs">memory</span> PLC программирование</span>
+                </div>
+            </div>
+            <div class="bg-white rounded-3xl p-7 shadow-md border border-gray-100 hover-lift">
+                <span class="material-icons text-robot-accent text-3xl">business_center</span>
+                <h3 class="text-2xl font-bold mt-3 mb-2">Карьерные перспективы</h3>
+                <p class="text-gray-600">Выпускники могут работать на инженерных должностях программиста, электроника, а также руководить проектом разработки или подразделением — сектором, лабораторией, отделом.</p>
+                <div class="mt-4 flex flex-wrap gap-2">
+                    <span class="bg-amber-50 text-amber-800 px-3 py-1 rounded-full text-sm font-medium">Инженер-робототехник</span>
+                    <span class="bg-amber-50 text-amber-800 px-3 py-1 rounded-full text-sm font-medium">Программист ПЛК</span>
+                    <span class="bg-amber-50 text-amber-800 px-3 py-1 rounded-full text-sm font-medium">Руководитель проектов</span>
+                    <span class="bg-amber-50 text-amber-800 px-3 py-1 rounded-full text-sm font-medium">Специалист по автоматизации</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Curriculum Section -->
+        <div id="curriculum" class="scroll-mt-24 mb-20">
+            <div class="text-center mb-10">
+                <div class="inline-flex items-center gap-2 bg-red-100 text-red-800 px-4 py-1 rounded-full text-sm font-semibold">
+                    <span class="material-icons text-sm">format_list_bulleted</span>
+                    <span>Академический план</span>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-4">Дисциплины & исследовательские модули</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto mt-2">Современные курсы по мехатронике, робототехнике и системам управления</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Core Disciplines -->
+                <div class="bg-white rounded-2xl shadow-md border border-gray-200 overflow-hidden">
+                    <div class="bg-gradient-to-r from-gray-800 to-robot-primary text-white px-6 py-4 flex items-center gap-2">
+                        <span class="material-icons">precision_manufacturing</span>
+                        <h3 class="text-xl font-bold">Основные дисциплины</h3>
+                    </div>
+                    <div class="p-5">
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start gap-2"><span class="material-icons text-red-500 text-sm">chevron_right</span> Теория автоматического управления</li>
+                            <li class="flex items-start gap-2"><span class="material-icons text-red-500 text-sm">chevron_right</span> Промышленные роботы и робототехнические комплексы</li>
+                            <li class="flex items-start gap-2"><span class="material-icons text-red-500 text-sm">chevron_right</span> Программирование контроллеров (Siemens, Mitsubishi)</li>
+                            <li class="flex items-start gap-2"><span class="material-icons text-red-500 text-sm">chevron_right</span> Мехатронные системы и их проектирование</li>
+                            <li class="flex items-start gap-2"><span class="material-icons text-red-500 text-sm">chevron_right</span> Искусственный интеллект в системах управления</li>
+                            <li class="flex items-start gap-2"><span class="material-icons text-red-500 text-sm">chevron_right</span> Цифровые двойники в промышленности</li>
+                            <li class="flex items-start gap-2"><span class="material-icons text-red-500 text-sm">chevron_right</span> Интегрированные системы автоматизации</li>
+                            <li class="flex items-start gap-2"><span class="material-icons text-red-500 text-sm">chevron_right</span> Компьютерное зрение в робототехнике</li>
+                            <li class="flex items-start gap-2"><span class="material-icons text-red-500 text-sm">chevron_right</span> Микроконтроллерные системы управления</li>
+                            <li class="flex items-start gap-2"><span class="material-icons text-red-500 text-sm">chevron_right</span> Технологии промышленного интернета вещей (IIoT)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Elective & Practice -->
+                <div class="space-y-8">
+                    <div class="bg-white rounded-2xl shadow-md border border-gray-200">
+                        <div class="bg-robot-secondary text-white px-6 py-3 rounded-t-2xl flex items-center gap-2">
+                            <span class="material-icons">tune</span>
+                            <h3 class="text-xl font-bold">Элективные курсы</h3>
+                        </div>
+                        <div class="p-5 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <div class="flex items-center gap-1"><span class="material-icons text-robot-primary text-sm">settings</span> Системы реального времени</div>
+                            <div class="flex items-center gap-1"><span class="material-icons text-robot-primary text-sm">sensors</span> Сенсорика и актуаторы</div>
+                            <div class="flex items-center gap-1"><span class="material-icons text-robot-primary text-sm">wifi</span> Промышленные сети</div>
+                            <div class="flex items-center gap-1"><span class="material-icons text-robot-primary text-sm">model_training</span> Робототехническое моделирование</div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-md border border-gray-200">
+                        <div class="bg-gray-700 text-white px-6 py-3 rounded-t-2xl flex items-center gap-2">
+                            <span class="material-icons">work</span>
+                            <h3 class="text-xl font-bold">Практика & Стажировки</h3>
+                        </div>
+                        <div class="p-5">
+                            <p class="text-gray-700">Практическая подготовка на базе индустриальных партнеров с использованием реального промышленного оборудования:</p>
+                            <div class="mt-4 flex flex-wrap gap-3">
+                                <div class="bg-gray-100 rounded-xl p-3 text-center flex-1">
+                                    <span class="material-icons text-robot-primary">precision_manufacturing</span>
+                                    <p class="text-xs font-semibold mt-1">KUKA</p>
+                                </div>
+                                <div class="bg-gray-100 rounded-xl p-3 text-center flex-1">
+                                    <span class="material-icons text-robot-primary">electrical_services</span>
+                                    <p class="text-xs font-semibold mt-1">Siemens</p>
+                                </div>
+                                <div class="bg-gray-100 rounded-xl p-3 text-center flex-1">
+                                    <span class="material-icons text-robot-primary">memory</span>
+                                    <p class="text-xs font-semibold mt-1">Mitsubishi</p>
+                                </div>
+                                <div class="bg-gray-100 rounded-xl p-3 text-center flex-1">
+                                    <span class="material-icons text-robot-primary">business</span>
+                                    <p class="text-xs font-semibold mt-1">Роснефть</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 bg-gradient-to-r from-gray-100 to-red-50 rounded-2xl p-5 flex flex-wrap justify-between items-center border border-gray-200">
+                <div class="flex items-center gap-2"><span class="material-icons text-robot-primary">science</span><span class="font-bold">Научно-исследовательская работа:</span> Проведение исследований в области мехатроники, робототехники, теории управления и методов искусственного интеллекта</div>
+                <span class="bg-robot-primary text-white px-3 py-1 rounded-full text-xs font-medium">Современное оборудование</span>
+            </div>
+        </div>
+
+        <!-- Career Opportunities & Industry Partners -->
+        <div id="career" class="scroll-mt-24 bg-gradient-to-r from-gray-900 to-gray-800 rounded-3xl p-8 md:p-10 text-white shadow-xl mb-16">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <div class="flex items-center gap-2 mb-3"><span class="material-icons text-red-400">trending_up</span><span class="text-red-400 font-semibold">Трудоустройство</span></div>
+                    <h3 class="text-3xl font-bold mb-4">Места работы выпускников</h3>
+                    <p class="text-gray-300 mb-5">Выпускники программы востребованы в ведущих российских и зарубежных компаниях. Местом трудоустройства являются ПАО «НК «Роснефть» и ее дочерние компании, а также ведущие российские и зарубежные компании в сфере автоматизации и робототехники.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-red-600 text-white px-4 py-1.5 rounded-full font-medium flex items-center gap-1"><span class="material-icons text-sm">business</span> Роснефть</span>
+                        <span class="bg-white/10 border border-white/20 px-4 py-1.5 rounded-full flex items-center gap-1"><span class="material-icons text-sm">precision_manufacturing</span> KUKA</span>
+                        <span class="bg-white/10 border border-white/20 px-4 py-1.5 rounded-full flex items-center gap-1"><span class="material-icons text-sm">electrical_services</span> Siemens</span>
+                        <span class="bg-white/10 border border-white/20 px-4 py-1.5 rounded-full flex items-center gap-1"><span class="material-icons text-sm">engineering</span> Газпром нефть</span>
+                    </div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                    <div class="flex items-center gap-2 mb-3"><span class="material-icons">engineering</span><span class="font-medium">Должностные позиции</span></div>
+                    <hr class="my-3 border-white/20">
+                    <div class="grid grid-cols-2 gap-2 text-sm">
+                        <div class="flex items-center gap-1"><span class="material-icons text-sm">check_circle</span> Инженер-робототехник</div>
+                        <div class="flex items-center gap-1"><span class="material-icons text-sm">check_circle</span> Программист ПЛК</div>
+                        <div class="flex items-center gap-1"><span class="material-icons text-sm">check_circle</span> Специалист по автоматизации</div>
+                        <div class="flex items-center gap-1"><span class="material-icons text-sm">check_circle</span> Руководитель проектов</div>
+                        <div class="flex items-center gap-1"><span class="material-icons text-sm">check_circle</span> Системный интегратор</div>
+                        <div class="flex items-center gap-1"><span class="material-icons text-sm">check_circle</span> Научный сотрудник</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Equipment Showcase -->
+        <div class="bg-white rounded-3xl shadow-xl border border-gray-200 overflow-hidden mb-16">
+            <div class="grid md:grid-cols-2">
+                <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-8 md:p-10 text-white">
+                    <span class="material-icons text-4xl mb-4">precision_manufacturing</span>
+                    <h3 class="text-2xl font-bold mb-2">Современное оборудование</h3>
+                    <p class="text-gray-300 mb-4">В образовательном процессе применяется современное оборудование:</p>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-sm">🤖 Промышленные роботы KUKA</span>
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-sm">⚙️ Контроллеры Siemens</span>
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-sm">🔧 Mitsubishi Electric</span>
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-sm">📟 ICP DAS</span>
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-sm">🔌 Balluff</span>
+                    </div>
+                </div>
+                <div class="p-8 md:p-10 bg-gray-50">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="material-icons text-robot-primary">school</span>
+                        <h4 class="font-bold text-lg">Лабораторная база</h4>
+                    </div>
+                    <p class="text-gray-600 mb-4">Студенты имеют доступ к современным лабораториям мехатроники и робототехники, оснащенным промышленными образцами оборудования для практической подготовки.</p>
+                    <div class="grid grid-cols-3 gap-2 text-center text-sm">
+                        <div class="p-2"><span class="material-icons text-robot-primary">memory</span><p class="text-xs">Лаборатория ПЛК</p></div>
+                        <div class="p-2"><span class="material-icons text-robot-primary">smart_toy</span><p class="text-xs">Робототехника</p></div>
+                        <div class="p-2"><span class="material-icons text-robot-primary">settings</span><p class="text-xs">Системы управления</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Application Form -->
+        <div id="apply" class="scroll-mt-24 bg-white rounded-3xl shadow-xl border border-gray-200 overflow-hidden">
+            <div class="grid md:grid-cols-2">
+                <div class="bg-gradient-to-br from-gray-800 to-robot-secondary p-8 md:p-10 text-white">
+                    <span class="material-icons text-4xl mb-4">contact_mail</span>
+                    <h3 class="text-2xl font-bold mb-2">Начните карьеру в робототехнике</h3>
+                    <p class="text-gray-200 mb-6">Оставьте заявку, и наши специалисты проконсультируют вас по вопросам поступления, условиям обучения и карьерным перспективам в области мехатроники и робототехники.</p>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-center gap-2"><span class="material-icons text-gray-300">phone</span> +7 (347) 123-45-67</div>
+                        <div class="flex items-center gap-2"><span class="material-icons text-gray-300">email</span> robotics@ugntu.ru</div>
+                        <div class="flex items-center gap-2"><span class="material-icons text-gray-300">location_on</span> г. Уфа, ул. Космонавтов, 1</div>
+                    </div>
+                </div>
+                <div class="p-8 md:p-10">
+                    <form id="applicationForm" action="#" method="POST">
+                        <div class="grid gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">ФИО *</label>
+                                <input type="text" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-robot-primary focus:border-transparent">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Email *</label>
+                                <input type="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-robot-primary focus:border-transparent">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Телефон *</label>
+                                <input type="tel" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-robot-primary focus:border-transparent">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Образование / Вуз</label>
+                                <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-robot-primary focus:border-transparent">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Ваш вопрос *</label>
+                                <textarea rows="3" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-robot-primary focus:border-transparent"></textarea>
+                            </div>
+                            <button type="submit" class="bg-robot-primary hover:bg-robot-secondary text-white font-semibold py-3 rounded-lg transition flex items-center justify-center gap-2">
+                                <span class="material-icons">send</span>
+                                Отправить заявку
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-10 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 md:px-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+            <div class="text-center md:text-left">
+                <p class="font-semibold text-white flex items-center gap-1 justify-center md:justify-start"><span class="material-icons text-robot-primary">smart_toy</span> Магистратура 09.04.01 — Мехатроника и робототехника</p>
+                <p class="text-xs mt-1">Промышленные роботы | Системы управления | Автоматизация</p>
+                <p class="text-xs text-gray-500 mt-2">© 2025 УГНТУ. Подготовка специалистов в области мехатроники и робототехники.</p>
+            </div>
+            <div class="flex gap-6">
+                <a href="#" class="hover:text-white transition flex items-center gap-1"><span class="material-icons text-sm">mail</span> Приёмная комиссия</a>
+                <a href="#" class="hover:text-white transition flex items-center gap-1"><span class="material-icons text-sm">call</span> Контакты</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('applicationForm')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Спасибо! Ваша заявка успешно отправлена. Наш специалист свяжется с вами в ближайшее время.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

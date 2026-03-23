@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Магистратура 09.04.01 | Разработка и совершенствование программных моделей искусственного интеллекта | УГНТУ</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Магистерская программа по искусственному интеллекту, машинному обучению и аналитике больших данных. Подготовка специалистов Data Science, аналитиков, разработчиков интеллектуальных систем.">
+    <meta name="keywords" content="искусственный интеллект, машинное обучение, Data Science, Big Data, магистратура, УГНТУ, нейронные сети, аналитика данных">
+    
+    <!-- Google Fonts + Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN (for immediate styling, no build needed) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ai-primary': '#4F46E5',
+                        'ai-secondary': '#7C3AED',
+                        'ai-dark': '#1E1B4B',
+                        'ai-accent': '#06B6D4',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.6s ease-out',
+                        'slide-up': 'slideUp 0.5s ease-out',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(100%)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                    },
+                },
+            },
+        }
+    </script>
+    
+    <style>
+        * {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .gradient-ai {
+            background: linear-gradient(135deg, #1E1B4B 0%, #4F46E5 50%, #7C3AED 100%);
+        }
+        .gradient-card {
+            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+        }
+        .hover-glow:hover {
+            transition: all 0.3s ease;
+            box-shadow: 0 20px 35px -12px rgba(79, 70, 229, 0.25);
+            transform: translateY(-4px);
+        }
+        .neural-bg {
+            background-image: radial-gradient(circle at 20% 80%, rgba(79, 70, 229, 0.03) 0%, rgba(126, 58, 237, 0.02) 100%);
+        }
+        @keyframes pulse-slow {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+        }
+        .animate-pulse-slow {
+            animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 antialiased">
+
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm">
+        <nav class="max-w-7xl mx-auto px-6 md:px-8 py-4 flex flex-wrap items-center justify-between gap-4">
+            <div class="flex items-center gap-2">
+                <span class="material-icons text-ai-primary text-2xl">psychology</span>
+                <span class="font-bold text-lg tracking-tight text-gray-800">MSc <span class="text-ai-primary">| AI</span></span>
+            </div>
+            <div class="flex gap-6 text-sm font-medium">
+                <a href="#program" class="hidden md:inline-block text-gray-600 hover:text-ai-primary transition">О программе</a>
+                <a href="#curriculum" class="hidden md:inline-block text-gray-600 hover:text-ai-primary transition">Учебный план</a>
+                <a href="#career" class="hidden md:inline-block text-gray-600 hover:text-ai-primary transition">Карьера</a>
+                <a href="#apply" class="bg-ai-primary text-white px-5 py-2 rounded-full text-sm font-semibold shadow-md hover:bg-ai-secondary transition flex items-center gap-1">
+                    <span class="material-icons text-sm">description</span>
+                    <span>Подать заявку</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="gradient-ai text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-black/20"></div>
+        <!-- Abstract neural network decoration -->
+        <div class="absolute top-0 right-0 w-96 h-96 opacity-10">
+            <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="80" stroke="white" stroke-width="1" stroke-dasharray="5 5"/>
+                <circle cx="100" cy="100" r="60" stroke="white" stroke-width="1"/>
+                <circle cx="100" cy="100" r="40" stroke="white" stroke-width="1"/>
+                <circle cx="100" cy="100" r="20" stroke="white" stroke-width="1"/>
+                <line x1="100" y1="20" x2="100" y2="180" stroke="white" stroke-width="1"/>
+                <line x1="20" y1="100" x2="180" y2="100" stroke="white" stroke-width="1"/>
+                <line x1="38" y1="38" x2="162" y2="162" stroke="white" stroke-width="1"/>
+                <line x1="162" y1="38" x2="38" y2="162" stroke="white" stroke-width="1"/>
+            </svg>
+        </div>
+        <div class="relative max-w-7xl mx-auto px-6 md:px-8 py-16 lg:py-24">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 text-center lg:text-left animate-fade-in">
+                    <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-1.5 text-sm font-medium border border-white/20">
+                        <span class="material-icons text-sm">auto_awesome</span>
+                        <span>Магистратура будущего</span>
+                        <span class="w-1 h-1 bg-white/50 rounded-full"></span>
+                        <span>Искусственный интеллект</span>
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
+                        Разработка и<br>
+                        совершенствование<br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-200">программных моделей ИИ</span>
+                    </h1>
+                    <p class="text-xl text-indigo-100 max-w-2xl mx-auto lg:mx-0">
+                        Подготовка специалистов в области искусственного интеллекта, машинного обучения и инновационных технологий
+                    </p>
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-3 pt-2">
+                        <div class="bg-white/10 backdrop-blur-sm rounded-2xl px-5 py-2 flex items-center gap-2">
+                            <span class="material-icons">school</span>
+                            <span class="font-semibold">09.04.01</span>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-2xl px-5 py-2 flex items-center gap-2">
+                            <span class="material-icons">psychology</span>
+                            <span>Data Science & AI</span>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-2xl px-5 py-2 flex items-center gap-2">
+                            <span class="material-icons">trending_up</span>
+                            <span>Стартап-ориентированность</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-4 justify-center lg:justify-start pt-4">
+                        <a href="#curriculum" class="bg-white text-ai-primary hover:bg-gray-100 font-bold px-8 py-3 rounded-full transition-all shadow-lg hover:shadow-xl inline-flex items-center gap-2">
+                            <span class="material-icons">menu_book</span>
+                            <span>Учебный план</span>
+                        </a>
+                        <a href="#program" class="bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/40 text-white font-medium px-7 py-3 rounded-full transition-all inline-flex items-center gap-2">
+                            <span class="material-icons">info</span>
+                            <span>О программе</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-6 w-full max-w-sm shadow-2xl border border-white/20 animate-float">
+                        <div class="text-center mb-4">
+                            <span class="material-icons text-6xl text-cyan-300">psychology</span>
+                        </div>
+                        <p class="text-center font-semibold text-xl">Искусственный интеллект</p>
+                        <p class="text-center text-sm text-indigo-200">Машинное обучение · Big Data · Нейросети</p>
+                        <hr class="my-3 border-white/20">
+                        <div class="flex justify-between text-sm">
+                            <div class="flex items-center gap-1"><span class="material-icons text-sm">today</span> <span>2 года</span></div>
+                            <div class="flex items-center gap-1"><span class="material-icons text-sm">groups</span> <span>Очная форма</span></div>
+                            <div class="flex items-center gap-1"><span class="material-icons text-sm">rocket_launch</span> <span>Data Scientist</span></div>
+                        </div>
+                        <div class="mt-4 flex justify-center gap-3 text-xs text-indigo-200">
+                            <span>🔬 ML</span>
+                            <span>📊 Big Data</span>
+                            <span>🧠 Neural Networks</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
+            <svg viewBox="0 0 1200 100" preserveAspectRatio="none" class="relative block w-full h-8 md:h-12">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="white" opacity=".3"></path>
+                <path d="M0,0V15.81C13,21.25,27.93,25.67,44.24,28.45c69.76,10.19,140.09,9.45,210.06-1.45,69-10.73,136.2-30.58,206.52-35.28C532.38,11.89,612.3,25.61,691.46,38.75c79.16,13.14,158.1,15.55,237.33,6.55,46-5.25,90.43-17.89,135.22-31.42C1091,7.78,1155.52,0,1200,0V0Z" fill="white"></path>
+            </svg>
+        </div>
+    </section>
+
+    <main class="max-w-7xl mx-auto px-6 md:px-8 py-16 lg:py-20">
+        <!-- Program Description -->
+        <div id="program" class="scroll-mt-24 mb-20">
+            <div class="grid lg:grid-cols-3 gap-10">
+                <div class="lg:col-span-2 space-y-5">
+                    <div class="inline-flex items-center gap-2 bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full text-sm font-semibold">
+                        <span class="material-icons text-sm">auto_awesome</span>
+                        <span>Аккредитованная программа</span>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Подготовка лидеров в области искусственного интеллекта</h2>
+                    <p class="text-gray-600 leading-relaxed text-lg">Целью программы является подготовка специалистов в области искусственного интеллекта, машинного обучения и инновационных технологий. Программа направлена на удовлетворение растущего спроса на профессионалов в современных областях компьютерных технологий. Обучающиеся получают знания и навыки для разработки программного обеспечения, автоматизированных систем, а также для создания интеллектуальных систем, высокопроизводительных программных приложений и методов информационной безопасности.</p>
+                    <div class="grid sm:grid-cols-2 gap-4 pt-2">
+                        <div class="flex items-start gap-3 bg-white p-5 rounded-2xl shadow-md border border-gray-100 hover-glow">
+                            <span class="material-icons text-ai-primary text-2xl">data_usage</span>
+                            <div><h4 class="font-bold">Data Science & Analytics</h4><p class="text-gray-500 text-sm">Прогнозирование на основе машинного обучения, Data Mining, Big Data</p></div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-white p-5 rounded-2xl shadow-md border border-gray-100 hover-glow">
+                            <span class="material-icons text-ai-primary text-2xl">psychology</span>
+                            <div><h4 class="font-bold">Интеллектуальные системы</h4><p class="text-gray-500 text-sm">Разработка нейросетей, систем поддержки принятия решений</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 p-7 rounded-3xl shadow-md border border-indigo-100">
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="material-icons text-ai-primary text-2xl">workspace_premium</span>
+                        <h3 class="text-xl font-bold text-gray-800">Ключевые преимущества</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex gap-2 items-start"><span class="material-icons text-indigo-600 text-sm">check_circle</span><span>Специалисты Data Science и ML</span></li>
+                        <li class="flex gap-2 items-start"><span class="material-icons text-indigo-600 text-sm">check_circle</span><span>Прогнозирование на основе научных методов</span></li>
+                        <li class="flex gap-2 items-start"><span class="material-icons text-indigo-600 text-sm">check_circle</span><span>Big Data & аналитика больших данных</span></li>
+                        <li class="flex gap-2 items-start"><span class="material-icons text-indigo-600 text-sm">check_circle</span><span>Стажировки в ведущих IT-компаниях</span></li>
+                        <li class="flex gap-2 items-start"><span class="material-icons text-indigo-600 text-sm">check_circle</span><span>Стартап-ориентированность</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Competencies & Career Preview -->
+        <div class="grid md:grid-cols-2 gap-8 mb-20">
+            <div class="bg-white rounded-3xl p-7 shadow-md border border-gray-100 hover-glow">
+                <span class="material-icons text-ai-primary text-3xl">insights</span>
+                <h3 class="text-2xl font-bold mt-3 mb-2">Компетенции выпускников</h3>
+                <p class="text-gray-600">Профессиональная деятельность выпускника связана с прогнозированием будущего на основе научных методов и дисциплин — машинного обучения, Data Mining, Big Data, методов оптимизации, математической статистики. Выпускники владеют навыками разработки интеллектуальных систем и их модулей.</p>
+                <div class="flex flex-wrap gap-2 mt-4">
+                    <span class="bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full text-sm flex items-center gap-1"><span class="material-icons text-xs">neurology</span> Machine Learning</span>
+                    <span class="bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full text-sm flex items-center gap-1"><span class="material-icons text-xs">analytics</span> Big Data</span>
+                    <span class="bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full text-sm flex items-center gap-1"><span class="material-icons text-xs">data_usage</span> Data Mining</span>
+                </div>
+            </div>
+            <div class="bg-white rounded-3xl p-7 shadow-md border border-gray-100 hover-glow">
+                <span class="material-icons text-ai-accent text-3xl">rocket_launch</span>
+                <h3 class="text-2xl font-bold mt-3 mb-2">Карьерные треки</h3>
+                <p class="text-gray-600">Выпускники востребованы в IT-компаниях, аналитических отделах компаний, банках, государственных и муниципальных органах управления, в сфере производства продукции и услуг, а также в научных организациях.</p>
+                <div class="mt-4 flex flex-wrap gap-2">
+                    <span class="bg-purple-50 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">Data Scientist</span>
+                    <span class="bg-purple-50 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">AI Specialist</span>
+                    <span class="bg-purple-50 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">Data Analyst</span>
+                    <span class="bg-purple-50 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">IT Consultant</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Curriculum Section -->
+        <div id="curriculum" class="scroll-mt-24 mb-20">
+            <div class="text-center mb-10">
+                <div class="inline-flex items-center gap-2 bg-indigo-100 text-indigo-800 px-4 py-1 rounded-full text-sm font-semibold">
+                    <span class="material-icons text-sm">format_list_bulleted</span>
+                    <span>Академический план</span>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-4">Дисциплины & исследовательские модули</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto mt-2">Современные курсы по искусственному интеллекту, машинному обучению и аналитике данных</p>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Compulsory courses -->
+                <div class="bg-white rounded-2xl shadow-md border border-gray-200 overflow-hidden">
+                    <div class="bg-gradient-to-r from-ai-dark to-ai-primary text-white px-6 py-4 flex items-center gap-2">
+                        <span class="material-icons">menu_book</span>
+                        <h3 class="text-xl font-bold">Обязательные курсы</h3>
+                    </div>
+                    <div class="p-5 grid grid-cols-1 gap-2">
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start gap-2"><span class="material-icons text-indigo-500 text-sm">chevron_right</span> Социально-экономическое обоснование разработки искусственного интеллекта</li>
+                            <li class="flex items-start gap-2"><span class="material-icons text-indigo-500 text-sm">chevron_right</span> Статистические и вероятные методы в машинном обучении</li>
+                            <li class="flex items-start gap-2"><span class="material-icons text-indigo-500 text-sm">chevron_right</span> Аналитика больших данных</li>
+                            <li class="flex items-start gap-2"><span class="material-icons text-indigo-500 text-sm">chevron_right</span> Неклассические логики</li>
+                            <li class="flex items-start gap-2"><span class="material-icons text-indigo-500 text-sm">chevron_right</span> Управление высокотехнологичными программами и проектами</li>
+                            <li class="flex items-start gap-2"><span class="material-icons text-indigo-500 text-sm">chevron_right</span> Защита объектов интеллектуальной собственности</li>
+                            <li class="flex items-start gap-2"><span class="material-icons text-indigo-500 text-sm">chevron_right</span> Банки данных</li>
+                            <li class="flex items-start gap-2"><span class="material-icons text-indigo-500 text-sm">chevron_right</span> Системы автоматизированного проектирования PLD</li>
+                            <li class="flex items-start gap-2"><span class="material-icons text-indigo-500 text-sm">chevron_right</span> Искусственные нейронные сети</li>
+                            <li class="flex items-start gap-2"><span class="material-icons text-indigo-500 text-sm">chevron_right</span> Системы поддержки принятия решений</li>
+                            <li class="flex items-start gap-2"><span class="material-icons text-indigo-500 text-sm">chevron_right</span> Проектирование сложных пользовательских интерфейсов (UX-, UI-дизайн)</li>
+                            <li class="flex items-start gap-2"><span class="material-icons text-indigo-500 text-sm">chevron_right</span> Комплексное обеспечение безопасности информационных систем</li>
+                            <li class="flex items-start gap-2"><span class="material-icons text-indigo-500 text-sm">chevron_right</span> Разработка интеллектуальных систем и их модулей</li>
+                            <li class="flex items-start gap-2"><span class="material-icons text-indigo-500 text-sm">chevron_right</span> Научно-исследовательский семинар по системам искусственного интеллекта</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Elective part -->
+                <div class="space-y-8">
+                    <div class="bg-white rounded-2xl shadow-md border border-gray-200">
+                        <div class="bg-purple-700 text-white px-6 py-3 rounded-t-2xl flex items-center gap-2">
+                            <span class="material-icons">tune</span>
+                            <h3 class="text-xl font-bold">Элективная часть</h3>
+                        </div>
+                        <div class="p-5 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <div class="flex items-center gap-1"><span class="material-icons text-purple-600 text-sm">computer</span> Параллельные вычислительные системы</div>
+                            <div class="flex items-center gap-1"><span class="material-icons text-purple-600 text-sm">functions</span> Нелинейное математическое программирование</div>
+                            <div class="flex items-center gap-1"><span class="material-icons text-purple-600 text-sm">analytics</span> Интеллектуальные системы бизнес-аналитики</div>
+                            <div class="flex items-center gap-1"><span class="material-icons text-purple-600 text-sm">security</span> Интеллектуальные системы управления рисками</div>
+                            <div class="flex items-center gap-1"><span class="material-icons text-purple-600 text-sm">map</span> Геоинформационные технологии в системах ИИ</div>
+                            <div class="flex items-center gap-1"><span class="material-icons text-purple-600 text-sm">image</span> Цифровая обработка изображений</div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-md border border-gray-200">
+                        <div class="bg-teal-700 text-white px-6 py-3 rounded-t-2xl flex items-center gap-2">
+                            <span class="material-icons">work</span>
+                            <h3 class="text-xl font-bold">Практики & Стажировки</h3>
+                        </div>
+                        <div class="p-5">
+                            <p class="text-gray-700">Стажировки, научная деятельность и практики в ведущих IT-компаниях, занимающихся разработкой и поддержкой систем искусственного интеллекта и манипулирования большими данными.</p>
+                            <div class="mt-3 flex flex-wrap gap-2">
+                                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">🏢 Яндекс</span>
+                                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">🧠 Sber AI</span>
+                                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">📊 Data Lab</span>
+                                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">🔬 Исследовательские центры</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl p-5 flex flex-wrap justify-between items-center border border-indigo-200">
+                <div class="flex items-center gap-2"><span class="material-icons text-indigo-700">lightbulb</span><span class="font-bold">Стартап-ориентированность:</span> Каждый может начать свой бизнес самостоятельно — «Стартап»</div>
+                <span class="bg-indigo-200 text-indigo-800 px-3 py-1 rounded-full text-xs font-medium">Инновации & Предпринимательство</span>
+            </div>
+        </div>
+
+        <!-- Career Opportunities Deep Section -->
+        <div id="career" class="scroll-mt-24 bg-gradient-to-r from-ai-dark to-ai-primary rounded-3xl p-8 md:p-10 text-white shadow-xl mb-16">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <div class="flex items-center gap-2 mb-3"><span class="material-icons text-cyan-300">trending_up</span><span class="text-cyan-300 font-semibold">Карьерные перспективы</span></div>
+                    <h3 class="text-3xl font-bold mb-4">Кем работать? Будущее уже здесь</h3>
+                    <p class="text-indigo-100 mb-5">Выпускники программы получают большие перспективы и широкий выбор карьерных и бизнес-возможностей, как в индустрии, так и самостоятельно — каждый может начать свой бизнес: технологический стартап в сфере искусственного интеллекта.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-white text-ai-primary px-4 py-1.5 rounded-full font-medium flex items-center gap-1"><span class="material-icons text-sm">psychology</span> AI Specialist</span>
+                        <span class="bg-white/10 border border-white/20 px-4 py-1.5 rounded-full flex items-center gap-1"><span class="material-icons text-sm">analytics</span> Data Scientist</span>
+                        <span class="bg-white/10 border border-white/20 px-4 py-1.5 rounded-full flex items-center gap-1"><span class="material-icons text-sm">storage</span> Big Data Analyst</span>
+                        <span class="bg-white/10 border border-white/20 px-4 py-1.5 rounded-full flex items-center gap-1"><span class="material-icons text-sm">rocket_launch</span> Стартап-основатель</span>
+                    </div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                    <div class="flex items-center gap-2 mb-3"><span class="material-icons">business_center</span><span class="font-medium">Где работают выпускники</span></div>
+                    <hr class="my-3 border-white/20">
+                    <div class="grid grid-cols-2 gap-2 text-sm">
+                        <div class="flex items-center gap-1"><span class="material-icons text-sm">check_circle</span> IT-компании</div>
+                        <div class="flex items-center gap-1"><span class="material-icons text-sm">check_circle</span> Банки и финансовый сектор</div>
+                        <div class="flex items-center gap-1"><span class="material-icons text-sm">check_circle</span> Аналитические отделы</div>
+                        <div class="flex items-center gap-1"><span class="material-icons text-sm">check_circle</span> Государственное управление</div>
+                        <div class="flex items-center gap-1"><span class="material-icons text-sm">check_circle</span> Научные организации</div>
+                        <div class="flex items-center gap-1"><span class="material-icons text-sm">check_circle</span> Собственный стартап</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Application Form -->
+        <div id="apply" class="scroll-mt-24 bg-white rounded-3xl shadow-xl border border-gray-200 overflow-hidden mb-16">
+            <div class="grid md:grid-cols-2">
+                <div class="bg-gradient-to-br from-indigo-700 to-purple-800 p-8 md:p-10 text-white">
+                    <span class="material-icons text-4xl mb-4">contact_mail</span>
+                    <h3 class="text-2xl font-bold mb-2">Начните карьеру в AI</h3>
+                    <p class="text-indigo-100 mb-6">Оставьте заявку, и наши специалисты проконсультируют вас по вопросам поступления, условиям обучения и карьерным перспективам.</p>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-center gap-2"><span class="material-icons text-indigo-300">phone</span> +7 (347) 123-45-67</div>
+                        <div class="flex items-center gap-2"><span class="material-icons text-indigo-300">email</span> ai-program@ugntu.ru</div>
+                        <div class="flex items-center gap-2"><span class="material-icons text-indigo-300">location_on</span> г. Уфа, ул. Космонавтов, 1</div>
+                    </div>
+                </div>
+                <div class="p-8 md:p-10">
+                    <form id="applicationForm" action="#" method="POST">
+                        <div class="grid gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">ФИО *</label>
+                                <input type="text" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Email *</label>
+                                <input type="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Телефон *</label>
+                                <input type="tel" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Образование / Вуз</label>
+                                <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Ваш вопрос *</label>
+                                <textarea rows="3" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"></textarea>
+                            </div>
+                            <button type="submit" class="bg-indigo-700 hover:bg-indigo-800 text-white font-semibold py-3 rounded-lg transition flex items-center justify-center gap-2">
+                                <span class="material-icons">send</span>
+                                Отправить заявку
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-10 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 md:px-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+            <div class="text-center md:text-left">
+                <p class="font-semibold text-white flex items-center gap-1 justify-center md:justify-start"><span class="material-icons text-indigo-400">psychology</span> Магистратура 09.04.01 — Разработка и совершенствование программных моделей ИИ</p>
+                <p class="text-xs mt-1">Искусственный интеллект | Машинное обучение | Big Data</p>
+                <p class="text-xs text-gray-500 mt-2">© 2025 УГНТУ. Подготовка специалистов в области искусственного интеллекта.</p>
+            </div>
+            <div class="flex gap-6">
+                <a href="#" class="hover:text-white transition flex items-center gap-1"><span class="material-icons text-sm">mail</span> Приёмная комиссия</a>
+                <a href="#" class="hover:text-white transition flex items-center gap-1"><span class="material-icons text-sm">call</span> Контакты</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('applicationForm')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Спасибо! Ваша заявка успешно отправлена. Наш специалист свяжется с вами в ближайшее время.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
