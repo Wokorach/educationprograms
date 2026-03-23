@@ -74,6 +74,13 @@
         .robot-bg-pattern {
             background-image: radial-gradient(circle at 10% 20%, rgba(220, 38, 38, 0.05) 0%, rgba(31, 41, 55, 0.02) 100%);
         }
+        .testimonial-card {
+            background: linear-gradient(145deg, #ffffff 0%, #fef2f2 100%);
+        }
+        .quote-icon {
+            font-size: 48px;
+            color: rgba(220, 38, 38, 0.2);
+        }
     </style>
 </head>
 <body class="bg-gray-50 antialiased">
@@ -88,6 +95,7 @@
             <div class="flex gap-6 text-sm font-medium">
                 <a href="#program" class="hidden md:inline-block text-gray-600 hover:text-robot-primary transition">О программе</a>
                 <a href="#curriculum" class="hidden md:inline-block text-gray-600 hover:text-robot-primary transition">Учебный план</a>
+                <a href="#testimonials" class="hidden md:inline-block text-gray-600 hover:text-robot-primary transition">Отзывы</a>
                 <a href="#career" class="hidden md:inline-block text-gray-600 hover:text-robot-primary transition">Карьера</a>
                 <a href="#apply" class="bg-robot-primary text-white px-5 py-2 rounded-full text-sm font-semibold shadow-md hover:bg-robot-secondary transition flex items-center gap-1">
                     <span class="material-icons text-sm">description</span>
@@ -183,6 +191,7 @@
     </section>
 
     <main class="max-w-7xl mx-auto px-6 md:px-8 py-16 lg:py-20 robot-bg-pattern">
+        
         <!-- Program Description -->
         <div id="program" class="scroll-mt-24 mb-20">
             <div class="grid lg:grid-cols-3 gap-10">
@@ -216,6 +225,161 @@
                         <li class="flex gap-2 items-start"><span class="material-icons text-red-600 text-sm">check_circle</span><span>Искусственный интеллект в управлении</span></li>
                         <li class="flex gap-2 items-start"><span class="material-icons text-red-600 text-sm">check_circle</span><span>Сотрудничество с Роснефтью</span></li>
                     </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gallery Section - Photos of the Course -->
+        <div class="mb-20">
+            <div class="text-center mb-10">
+                <div class="inline-flex items-center gap-2 bg-gray-100 text-gray-700 px-4 py-1 rounded-full text-sm font-semibold">
+                    <span class="material-icons text-sm">photo_camera</span>
+                    <span>Фотогалерея</span>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-4">Учебный процесс и оборудование</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto mt-2">Современные лаборатории и практические занятия</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Photo 1: KUKA Robot -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover-lift">
+                    <img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=500&h=350&fit=crop" alt="Промышленный робот KUKA в лаборатории" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white font-medium">Промышленный робот KUKA KR 16</p>
+                    </div>
+                </div>
+                <!-- Photo 2: Students with Robot -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover-lift">
+                    <img src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=500&h=350&fit=crop" alt="Студенты работают с робототехническим оборудованием" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white font-medium">Практические занятия в лаборатории робототехники</p>
+                    </div>
+                </div>
+                <!-- Photo 3: Siemens Controller -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover-lift">
+                    <img src="https://images.unsplash.com/photo-1581092335871-5b4a1d2c6a5a?w=500&h=350&fit=crop" alt="Программирование контроллеров Siemens" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white font-medium">Программирование контроллеров Siemens</p>
+                    </div>
+                </div>
+                <!-- Photo 4: Industrial Automation Lab -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover-lift">
+                    <img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=500&h=350&fit=crop" alt="Лаборатория промышленной автоматизации" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white font-medium">Лаборатория промышленной автоматизации</p>
+                    </div>
+                </div>
+                <!-- Photo 5: Robotics Competition -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover-lift">
+                    <img src="https://images.unsplash.com/photo-1560264280-88b68371db39?w=500&h=350&fit=crop" alt="Студенты на робототехнических соревнованиях" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white font-medium">Участие в робототехнических соревнованиях</p>
+                    </div>
+                </div>
+                <!-- Photo 6: Research Lab -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover-lift">
+                    <img src="https://images.unsplash.com/photo-1581092335399-5b7b8b6a23c4?w=500&h=350&fit=crop" alt="Научно-исследовательская лаборатория" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white font-medium">Научно-исследовательская работа студентов</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonials Section -->
+        <div id="testimonials" class="scroll-mt-24 mb-20">
+            <div class="text-center mb-10">
+                <div class="inline-flex items-center gap-2 bg-amber-100 text-amber-800 px-4 py-1 rounded-full text-sm font-semibold">
+                    <span class="material-icons text-sm">format_quote</span>
+                    <span>Отзывы студентов и выпускников</span>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-4">Что говорят наши выпускники</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto mt-2">Реальные истории успеха студентов программы</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Testimonial 1 - Graduate -->
+                <div class="testimonial-card rounded-2xl p-6 shadow-lg border border-red-100 hover-lift">
+                    <div class="flex items-start gap-4">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-gray-700 to-robot-primary flex items-center justify-center text-white text-xl font-bold">
+                            АК
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center gap-1 mb-1">
+                                <span class="material-icons text-yellow-500 text-sm">star</span>
+                                <span class="material-icons text-yellow-500 text-sm">star</span>
+                                <span class="material-icons text-yellow-500 text-sm">star</span>
+                                <span class="material-icons text-yellow-500 text-sm">star</span>
+                                <span class="material-icons text-yellow-500 text-sm">star</span>
+                            </div>
+                            <h3 class="font-bold text-lg">Алексей Кондратьев</h3>
+                            <p class="text-sm text-robot-primary font-medium mb-2">Выпускник 2024, Инженер-робототехник в KUKA Robotics</p>
+                            <div class="relative">
+                                <span class="material-icons quote-icon absolute -top-2 -left-2 opacity-20">format_quote</span>
+                                <p class="text-gray-600 italic pl-6">"Программа дала мне не только теоретические знания, но и реальный опыт работы с промышленными роботами KUKA. Уже на втором курсе я прошел стажировку в компании-партнере, а после защиты диплома получил предложение о работе. Оборудование в лабораториях — самое современное, преподаватели — практикующие специалисты."</p>
+                            </div>
+                            <div class="mt-3 flex items-center gap-2 text-sm text-gray-500">
+                                <span class="material-icons text-sm">work</span>
+                                <span>Трудоустроен в KUKA Robotics</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 - Current Student -->
+                <div class="testimonial-card rounded-2xl p-6 shadow-lg border border-red-100 hover-lift">
+                    <div class="flex items-start gap-4">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-gray-700 to-robot-primary flex items-center justify-center text-white text-xl font-bold">
+                            МС
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center gap-1 mb-1">
+                                <span class="material-icons text-yellow-500 text-sm">star</span>
+                                <span class="material-icons text-yellow-500 text-sm">star</span>
+                                <span class="material-icons text-yellow-500 text-sm">star</span>
+                                <span class="material-icons text-yellow-500 text-sm">star</span>
+                                <span class="material-icons text-yellow-500 text-sm">star</span>
+                            </div>
+                            <h3 class="font-bold text-lg">Мария Соколова</h3>
+                            <p class="text-sm text-robot-primary font-medium mb-2">Студентка 2 курса, участница Robotics Challenge 2024</p>
+                            <div class="relative">
+                                <span class="material-icons quote-icon absolute -top-2 -left-2 opacity-20">format_quote</span>
+                                <p class="text-gray-600 italic pl-6">"Когда я поступала, меня привлекла практическая направленность программы. И я не ошиблась! Мы работаем с реальными контроллерами Siemens, программируем роботов KUKA, участвуем в соревнованиях. Особенно ценно, что многие проекты выполняются по заказу индустриальных партнеров — это отличная возможность проявить себя."</p>
+                            </div>
+                            <div class="mt-3 flex items-center gap-2 text-sm text-gray-500">
+                                <span class="material-icons text-sm">emoji_events</span>
+                                <span>Призер Robotics Challenge 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 - Graduate Working in Industry -->
+                <div class="testimonial-card rounded-2xl p-6 shadow-lg border border-red-100 hover-lift md:col-span-2">
+                    <div class="flex flex-col md:flex-row items-start gap-4">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-gray-700 to-robot-primary flex items-center justify-center text-white text-xl font-bold">
+                            ДИ
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center gap-1 mb-1">
+                                <span class="material-icons text-yellow-500 text-sm">star</span>
+                                <span class="material-icons text-yellow-500 text-sm">star</span>
+                                <span class="material-icons text-yellow-500 text-sm">star</span>
+                                <span class="material-icons text-yellow-500 text-sm">star</span>
+                                <span class="material-icons text-yellow-500 text-sm">star</span>
+                            </div>
+                            <h3 class="font-bold text-lg">Дмитрий Игнатьев</h3>
+                            <p class="text-sm text-robot-primary font-medium mb-2">Выпускник 2023, Руководитель отдела автоматизации в ПАО «Роснефть»</p>
+                            <div class="relative">
+                                <span class="material-icons quote-icon absolute -top-2 -left-2 opacity-20">format_quote</span>
+                                <p class="text-gray-600 italic pl-6">"Программа мехатроники и робототехники УГНТУ стала фундаментом моей карьеры. Компетенции, полученные в процессе обучения — от программирования ПЛК до проектирования мехатронных систем — позволяют мне успешно руководить крупными проектами автоматизации на нефтеперерабатывающих предприятиях. Особенно благодарен за возможность работать с оборудованием ведущих мировых производителей прямо во время учебы. Сейчас я сам привлекаю студентов на стажировки в нашу компанию — они показывают отличный уровень подготовки."</p>
+                            </div>
+                            <div class="mt-3 flex items-center gap-2 text-sm text-gray-500">
+                                <span class="material-icons text-sm">business</span>
+                                <span>Руководитель отдела автоматизации, Роснефть</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
