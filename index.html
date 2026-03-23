@@ -14,6 +14,34 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'cyan-primary': '#0e7c86',
+                        'cyan-dark': '#0B2B40',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.6s ease-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                    },
+                },
+            },
+        }
+    </script>
+    
     <style>
         * {
             font-family: 'Inter', system-ui, -apple-system, sans-serif;
@@ -36,19 +64,12 @@
             background: rgba(255, 255, 255, 0.06);
             border: 1px solid rgba(255, 255, 255, 0.15);
         }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
         .animate-fade-in {
             animation: fadeIn 0.6s ease-out;
         }
-        .testimonial-card {
-            background: linear-gradient(145deg, #ffffff 0%, #f0f9ff 100%);
-        }
-        .quote-icon {
-            font-size: 48px;
-            color: rgba(14, 124, 134, 0.2);
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
@@ -290,7 +311,7 @@
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Testimonial 1 - Graduate at Microsoft -->
-                <div class="testimonial-card rounded-2xl p-6 shadow-lg border border-cyan-100 hover-lift">
+                <div class="bg-gradient-to-br from-white to-cyan-50 rounded-2xl p-6 shadow-lg border border-cyan-100 hover-lift">
                     <div class="flex items-start gap-4">
                         <div class="w-16 h-16 rounded-full bg-gradient-to-br from-cyan-700 to-teal-600 flex items-center justify-center text-white text-xl font-bold">
                             ЕВ
@@ -305,10 +326,7 @@
                             </div>
                             <h3 class="font-bold text-lg">Екатерина Волкова</h3>
                             <p class="text-sm text-cyan-600 font-medium mb-2">Выпускница 2024, IoT Engineer в Microsoft</p>
-                            <div class="relative">
-                                <span class="material-icons quote-icon absolute -top-2 -left-2 opacity-20">format_quote</span>
-                                <p class="text-gray-600 italic pl-6">"Сетевая программа УГНТУ и Сколтех открыла для меня двери в мировую IT-индустрию. Обучение на английском языке, современные курсы по IoT и беспроводным системам, а также возможность стажировки в Сколтехе позволили мне получить оффер от Microsoft еще до защиты диплома. Особенно ценным был опыт работы над реальными проектами с индустриальными партнерами."</p>
-                            </div>
+                            <p class="text-gray-600 italic">"Сетевая программа УГНТУ и Сколтех открыла для меня двери в мировую IT-индустрию. Обучение на английском языке, современные курсы по IoT и беспроводным системам позволили мне получить оффер от Microsoft еще до защиты диплома."</p>
                             <div class="mt-3 flex items-center gap-2 text-sm text-gray-500">
                                 <span class="material-icons text-sm">work</span>
                                 <span>Трудоустроена в Microsoft (Redmond)</span>
@@ -318,7 +336,7 @@
                 </div>
                 
                 <!-- Testimonial 2 - Current Student -->
-                <div class="testimonial-card rounded-2xl p-6 shadow-lg border border-cyan-100 hover-lift">
+                <div class="bg-gradient-to-br from-white to-cyan-50 rounded-2xl p-6 shadow-lg border border-cyan-100 hover-lift">
                     <div class="flex items-start gap-4">
                         <div class="w-16 h-16 rounded-full bg-gradient-to-br from-cyan-700 to-teal-600 flex items-center justify-center text-white text-xl font-bold">
                             АС
@@ -333,10 +351,7 @@
                             </div>
                             <h3 class="font-bold text-lg">Андрей Соколов</h3>
                             <p class="text-sm text-cyan-600 font-medium mb-2">Студент 2 курса, победитель IoT Challenge 2024</p>
-                            <div class="relative">
-                                <span class="material-icons quote-icon absolute -top-2 -left-2 opacity-20">format_quote</span>
-                                <p class="text-gray-600 italic pl-6">"Программа полностью оправдала мои ожидания. Мы работаем с актуальными технологиями: от проектирования телекоммуникационных систем до разработки нейросетевых решений. Благодаря поддержке преподавателей из Сколтеха, наша команда заняла первое место на всероссийском хакатоне по интернету вещей. Уже сейчас я получаю предложения о работе от крупных IT-компаний."</p>
-                            </div>
+                            <p class="text-gray-600 italic">"Программа полностью оправдала мои ожидания. Мы работаем с актуальными технологиями: от проектирования телекоммуникационных систем до разработки нейросетевых решений. Благодаря поддержке преподавателей из Сколтеха, наша команда заняла первое место на всероссийском хакатоне по интернету вещей."</p>
                             <div class="mt-3 flex items-center gap-2 text-sm text-gray-500">
                                 <span class="material-icons text-sm">emoji_events</span>
                                 <span>Победитель IoT Challenge 2024</span>
@@ -346,7 +361,7 @@
                 </div>
                 
                 <!-- Testimonial 3 - Graduate at Skoltech Research -->
-                <div class="testimonial-card rounded-2xl p-6 shadow-lg border border-cyan-100 hover-lift md:col-span-2">
+                <div class="bg-gradient-to-br from-white to-cyan-50 rounded-2xl p-6 shadow-lg border border-cyan-100 hover-lift md:col-span-2">
                     <div class="flex flex-col md:flex-row items-start gap-4">
                         <div class="w-16 h-16 rounded-full bg-gradient-to-br from-cyan-700 to-teal-600 flex items-center justify-center text-white text-xl font-bold">
                             МК
@@ -361,10 +376,7 @@
                             </div>
                             <h3 class="font-bold text-lg">Михаил Королев</h3>
                             <p class="text-sm text-cyan-600 font-medium mb-2">Выпускник 2023, Научный сотрудник Сколтеха, исследователь 6G-технологий</p>
-                            <div class="relative">
-                                <span class="material-icons quote-icon absolute -top-2 -left-2 opacity-20">format_quote</span>
-                                <p class="text-gray-600 italic pl-6">"Сетевая магистратура стала для меня трамплином в науку. Благодаря совместной программе УГНТУ и Сколтеха я получил уникальную возможность заниматься исследованиями в области беспроводных технологий 6G под руководством ведущих ученых. Мой дипломный проект перерос в полноценную научную работу, которая сейчас публикуется в международных журналах. После окончания я остался в Сколтехе как младший научный сотрудник и продолжаю развивать направление, которое начал еще в магистратуре."</p>
-                            </div>
+                            <p class="text-gray-600 italic">"Сетевая магистратура стала для меня трамплином в науку. Благодаря совместной программе УГНТУ и Сколтеха я получил уникальную возможность заниматься исследованиями в области беспроводных технологий 6G под руководством ведущих ученых. После окончания я остался в Сколтехе как младший научный сотрудник."</p>
                             <div class="mt-3 flex flex-wrap gap-2 text-sm">
                                 <span class="bg-cyan-50 text-cyan-700 px-3 py-1 rounded-full flex items-center gap-1"><span class="material-icons text-sm">science</span> Научный сотрудник Сколтеха</span>
                                 <span class="bg-purple-50 text-purple-700 px-3 py-1 rounded-full flex items-center gap-1"><span class="material-icons text-sm">wifi</span> Исследования 6G</span>
@@ -540,7 +552,6 @@
     </footer>
 
     <script>
-        // Simple form handling
         document.getElementById('applicationForm')?.addEventListener('submit', function(e) {
             e.preventDefault();
             alert('Спасибо! Ваша заявка отправлена. Мы свяжемся с вами в ближайшее время.');
