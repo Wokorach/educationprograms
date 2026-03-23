@@ -14,9 +14,6 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Tailwind CSS (built from your source) -->
-    <link href="dist/output.css" rel="stylesheet">
-    
     <style>
         * {
             font-family: 'Inter', system-ui, -apple-system, sans-serif;
@@ -46,6 +43,13 @@
         .animate-fade-in {
             animation: fadeIn 0.6s ease-out;
         }
+        .testimonial-card {
+            background: linear-gradient(145deg, #ffffff 0%, #f0f9ff 100%);
+        }
+        .quote-icon {
+            font-size: 48px;
+            color: rgba(14, 124, 134, 0.2);
+        }
     </style>
 </head>
 <body class="bg-gray-50 antialiased">
@@ -59,7 +63,9 @@
             </div>
             <div class="flex gap-6 text-sm font-medium">
                 <a href="#program" class="hidden md:inline-block text-gray-600 hover:text-cyan-700 transition">Программа</a>
+                <a href="#gallery" class="hidden md:inline-block text-gray-600 hover:text-cyan-700 transition">Фотогалерея</a>
                 <a href="#curriculum" class="hidden md:inline-block text-gray-600 hover:text-cyan-700 transition">Учебный план</a>
+                <a href="#testimonials" class="hidden md:inline-block text-gray-600 hover:text-cyan-700 transition">Отзывы</a>
                 <a href="#career" class="hidden md:inline-block text-gray-600 hover:text-cyan-700 transition">Карьера</a>
                 <a href="#contact" class="bg-cyan-700 text-white px-5 py-2 rounded-full text-sm font-semibold shadow-md hover:bg-cyan-800 transition flex items-center gap-1">
                     <span class="material-icons text-sm">description</span>
@@ -188,6 +194,63 @@
             </div>
         </div>
 
+        <!-- Gallery Section - Photos of IoT Course -->
+        <div id="gallery" class="scroll-mt-24 mb-20">
+            <div class="text-center mb-10">
+                <div class="inline-flex items-center gap-2 bg-cyan-100 text-cyan-800 px-4 py-1 rounded-full text-sm font-semibold">
+                    <span class="material-icons text-sm">photo_camera</span>
+                    <span>Фотогалерея</span>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-4">Учебный процесс и технологии</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto mt-2">Современные лаборатории IoT, беспроводные технологии и нейросети</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Photo 1: IoT Lab -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover-lift">
+                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=500&h=350&fit=crop" alt="Лаборатория интернета вещей" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-cyan-900/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white font-medium">Лаборатория интернета вещей (IoT)</p>
+                    </div>
+                </div>
+                <!-- Photo 2: Wireless Systems -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover-lift">
+                    <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?w=500&h=350&fit=crop" alt="Беспроводные технологии 5G" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-cyan-900/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white font-medium">Исследование беспроводных технологий 5G</p>
+                    </div>
+                </div>
+                <!-- Photo 3: Neural Networks -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover-lift">
+                    <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=500&h=350&fit=crop" alt="Нейросетевое моделирование" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-cyan-900/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white font-medium">Нейросетевое моделирование и Big Data</p>
+                    </div>
+                </div>
+                <!-- Photo 4: Students Working -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover-lift">
+                    <img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=500&h=350&fit=crop" alt="Студенты в лаборатории" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-cyan-900/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white font-medium">Практические занятия в лаборатории</p>
+                    </div>
+                </div>
+                <!-- Photo 5: Telecommunication Systems -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover-lift">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&h=350&fit=crop" alt="Телекоммуникационные системы" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-cyan-900/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white font-medium">Проектирование телекоммуникационных систем</p>
+                    </div>
+                </div>
+                <!-- Photo 6: Innovation Workshop -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover-lift">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=500&h=350&fit=crop" alt="Мастерская инноваций" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-cyan-900/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white font-medium">Мастерская инноваций (Innovation Workshop)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Competencies & Career Preview -->
         <div class="grid md:grid-cols-2 gap-8 mb-20">
             <div class="bg-white rounded-3xl p-7 shadow-md border border-gray-100 hover-lift">
@@ -210,6 +273,104 @@
                     <span class="bg-amber-50 text-amber-800 px-3 py-1 rounded-full text-sm font-medium">БашНИПИнефть</span>
                     <span class="bg-amber-50 text-amber-800 px-3 py-1 rounded-full text-sm font-medium">Schlumberger</span>
                     <span class="bg-amber-50 text-amber-800 px-3 py-1 rounded-full text-sm font-medium">Роснефть</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonials Section -->
+        <div id="testimonials" class="scroll-mt-24 mb-20">
+            <div class="text-center mb-10">
+                <div class="inline-flex items-center gap-2 bg-teal-100 text-teal-800 px-4 py-1 rounded-full text-sm font-semibold">
+                    <span class="material-icons text-sm">format_quote</span>
+                    <span>Отзывы студентов и выпускников</span>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-4">Истории успеха выпускников</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto mt-2">Реальные карьерные треки студентов сетевой программы</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Testimonial 1 - Graduate at Microsoft -->
+                <div class="testimonial-card rounded-2xl p-6 shadow-lg border border-cyan-100 hover-lift">
+                    <div class="flex items-start gap-4">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-cyan-700 to-teal-600 flex items-center justify-center text-white text-xl font-bold">
+                            ЕВ
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center gap-1 mb-1">
+                                <span class="material-icons text-yellow-500 text-sm">star</span>
+                                <span class="material-icons text-yellow-500 text-sm">star</span>
+                                <span class="material-icons text-yellow-500 text-sm">star</span>
+                                <span class="material-icons text-yellow-500 text-sm">star</span>
+                                <span class="material-icons text-yellow-500 text-sm">star</span>
+                            </div>
+                            <h3 class="font-bold text-lg">Екатерина Волкова</h3>
+                            <p class="text-sm text-cyan-600 font-medium mb-2">Выпускница 2024, IoT Engineer в Microsoft</p>
+                            <div class="relative">
+                                <span class="material-icons quote-icon absolute -top-2 -left-2 opacity-20">format_quote</span>
+                                <p class="text-gray-600 italic pl-6">"Сетевая программа УГНТУ и Сколтех открыла для меня двери в мировую IT-индустрию. Обучение на английском языке, современные курсы по IoT и беспроводным системам, а также возможность стажировки в Сколтехе позволили мне получить оффер от Microsoft еще до защиты диплома. Особенно ценным был опыт работы над реальными проектами с индустриальными партнерами."</p>
+                            </div>
+                            <div class="mt-3 flex items-center gap-2 text-sm text-gray-500">
+                                <span class="material-icons text-sm">work</span>
+                                <span>Трудоустроена в Microsoft (Redmond)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 - Current Student -->
+                <div class="testimonial-card rounded-2xl p-6 shadow-lg border border-cyan-100 hover-lift">
+                    <div class="flex items-start gap-4">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-cyan-700 to-teal-600 flex items-center justify-center text-white text-xl font-bold">
+                            АС
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center gap-1 mb-1">
+                                <span class="material-icons text-yellow-500 text-sm">star</span>
+                                <span class="material-icons text-yellow-500 text-sm">star</span>
+                                <span class="material-icons text-yellow-500 text-sm">star</span>
+                                <span class="material-icons text-yellow-500 text-sm">star</span>
+                                <span class="material-icons text-yellow-500 text-sm">star</span>
+                            </div>
+                            <h3 class="font-bold text-lg">Андрей Соколов</h3>
+                            <p class="text-sm text-cyan-600 font-medium mb-2">Студент 2 курса, победитель IoT Challenge 2024</p>
+                            <div class="relative">
+                                <span class="material-icons quote-icon absolute -top-2 -left-2 opacity-20">format_quote</span>
+                                <p class="text-gray-600 italic pl-6">"Программа полностью оправдала мои ожидания. Мы работаем с актуальными технологиями: от проектирования телекоммуникационных систем до разработки нейросетевых решений. Благодаря поддержке преподавателей из Сколтеха, наша команда заняла первое место на всероссийском хакатоне по интернету вещей. Уже сейчас я получаю предложения о работе от крупных IT-компаний."</p>
+                            </div>
+                            <div class="mt-3 flex items-center gap-2 text-sm text-gray-500">
+                                <span class="material-icons text-sm">emoji_events</span>
+                                <span>Победитель IoT Challenge 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 - Graduate at Skoltech Research -->
+                <div class="testimonial-card rounded-2xl p-6 shadow-lg border border-cyan-100 hover-lift md:col-span-2">
+                    <div class="flex flex-col md:flex-row items-start gap-4">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-cyan-700 to-teal-600 flex items-center justify-center text-white text-xl font-bold">
+                            МК
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center gap-1 mb-1">
+                                <span class="material-icons text-yellow-500 text-sm">star</span>
+                                <span class="material-icons text-yellow-500 text-sm">star</span>
+                                <span class="material-icons text-yellow-500 text-sm">star</span>
+                                <span class="material-icons text-yellow-500 text-sm">star</span>
+                                <span class="material-icons text-yellow-500 text-sm">star</span>
+                            </div>
+                            <h3 class="font-bold text-lg">Михаил Королев</h3>
+                            <p class="text-sm text-cyan-600 font-medium mb-2">Выпускник 2023, Научный сотрудник Сколтеха, исследователь 6G-технологий</p>
+                            <div class="relative">
+                                <span class="material-icons quote-icon absolute -top-2 -left-2 opacity-20">format_quote</span>
+                                <p class="text-gray-600 italic pl-6">"Сетевая магистратура стала для меня трамплином в науку. Благодаря совместной программе УГНТУ и Сколтеха я получил уникальную возможность заниматься исследованиями в области беспроводных технологий 6G под руководством ведущих ученых. Мой дипломный проект перерос в полноценную научную работу, которая сейчас публикуется в международных журналах. После окончания я остался в Сколтехе как младший научный сотрудник и продолжаю развивать направление, которое начал еще в магистратуре."</p>
+                            </div>
+                            <div class="mt-3 flex flex-wrap gap-2 text-sm">
+                                <span class="bg-cyan-50 text-cyan-700 px-3 py-1 rounded-full flex items-center gap-1"><span class="material-icons text-sm">science</span> Научный сотрудник Сколтеха</span>
+                                <span class="bg-purple-50 text-purple-700 px-3 py-1 rounded-full flex items-center gap-1"><span class="material-icons text-sm">wifi</span> Исследования 6G</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -317,7 +478,7 @@
         </div>
 
         <!-- Contact Form -->
-        <div id="contact" class="scroll-mt-24 bg-white rounded-3xl shadow-xl border border-gray-200 overflow-hidden mb-16">
+        <div id="contact" class="scroll-mt-24 bg-white rounded-3xl shadow-xl border border-gray-200 overflow-hidden">
             <div class="grid md:grid-cols-2">
                 <div class="bg-gradient-to-br from-cyan-700 to-cyan-900 p-8 md:p-10 text-white">
                     <span class="material-icons text-4xl mb-4">contact_mail</span>
