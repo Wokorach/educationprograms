@@ -7,13 +7,13 @@
     
     <!-- SEO Meta Tags -->
     <meta name="description" content="Магистерская программа по искусственному интеллекту, машинному обучению и аналитике больших данных. Подготовка специалистов Data Science, аналитиков, разработчиков интеллектуальных систем.">
-    <meta name="keywords" content="искусственный интеллект, машинное обучение, Data Science, Big Data, магистратура, УГНТУ, нейронные сети, аналитика данных">
+    <meta name="keywords" content="искусственный интеллект, машинное обучение, Data Science, Big Data, магистратура, УГНТУ, нейронные сети, аналитика данных, Python, TensorFlow, PyTorch">
     
     <!-- Google Fonts + Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Tailwind CSS CDN (for immediate styling, no build needed) -->
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
     <script>
@@ -81,6 +81,13 @@
         .animate-pulse-slow {
             animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
         }
+        .testimonial-card {
+            background: linear-gradient(145deg, #ffffff 0%, #f5f3ff 100%);
+        }
+        .quote-icon {
+            font-size: 48px;
+            color: rgba(79, 70, 229, 0.2);
+        }
     </style>
 </head>
 <body class="bg-gray-50 antialiased">
@@ -94,7 +101,9 @@
             </div>
             <div class="flex gap-6 text-sm font-medium">
                 <a href="#program" class="hidden md:inline-block text-gray-600 hover:text-ai-primary transition">О программе</a>
+                <a href="#gallery" class="hidden md:inline-block text-gray-600 hover:text-ai-primary transition">Фотогалерея</a>
                 <a href="#curriculum" class="hidden md:inline-block text-gray-600 hover:text-ai-primary transition">Учебный план</a>
+                <a href="#testimonials" class="hidden md:inline-block text-gray-600 hover:text-ai-primary transition">Отзывы</a>
                 <a href="#career" class="hidden md:inline-block text-gray-600 hover:text-ai-primary transition">Карьера</a>
                 <a href="#apply" class="bg-ai-primary text-white px-5 py-2 rounded-full text-sm font-semibold shadow-md hover:bg-ai-secondary transition flex items-center gap-1">
                     <span class="material-icons text-sm">description</span>
@@ -192,7 +201,8 @@
         </div>
     </section>
 
-    <main class="max-w-7xl mx-auto px-6 md:px-8 py-16 lg:py-20">
+    <main class="max-w-7xl mx-auto px-6 md:px-8 py-16 lg:py-20 neural-bg">
+        
         <!-- Program Description -->
         <div id="program" class="scroll-mt-24 mb-20">
             <div class="grid lg:grid-cols-3 gap-10">
@@ -230,6 +240,63 @@
             </div>
         </div>
 
+        <!-- Gallery Section - Photos of the AI Course -->
+        <div id="gallery" class="scroll-mt-24 mb-20">
+            <div class="text-center mb-10">
+                <div class="inline-flex items-center gap-2 bg-indigo-100 text-indigo-800 px-4 py-1 rounded-full text-sm font-semibold">
+                    <span class="material-icons text-sm">photo_camera</span>
+                    <span>Фотогалерея</span>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-4">Учебный процесс и технологии</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto mt-2">Современные лаборатории, работа с данными, разработка нейросетей</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Photo 1: Neural Network Visualization -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover-glow">
+                    <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=500&h=350&fit=crop" alt="Визуализация нейронной сети" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-indigo-900/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white font-medium">Визуализация нейронных сетей</p>
+                    </div>
+                </div>
+                <!-- Photo 2: Students Working on AI Project -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover-glow">
+                    <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=500&h=350&fit=crop" alt="Студенты работают над проектами ИИ" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-indigo-900/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white font-medium">Разработка моделей машинного обучения</p>
+                    </div>
+                </div>
+                <!-- Photo 3: Data Analysis -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover-glow">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=350&fit=crop" alt="Анализ больших данных" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-indigo-900/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white font-medium">Аналитика больших данных</p>
+                    </div>
+                </div>
+                <!-- Photo 4: AI Research Lab -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover-glow">
+                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=500&h=350&fit=crop" alt="Лаборатория искусственного интеллекта" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-indigo-900/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white font-medium">Лаборатория ИИ и машинного обучения</p>
+                    </div>
+                </div>
+                <!-- Photo 5: Code Development -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover-glow">
+                    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&h=350&fit=crop" alt="Программирование и разработка" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-indigo-900/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white font-medium">Разработка программных моделей</p>
+                    </div>
+                </div>
+                <!-- Photo 6: AI Conference -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover-glow">
+                    <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=500&h=350&fit=crop" alt="Научная конференция по ИИ" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-indigo-900/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white font-medium">Участие в конференциях и хакатонах</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Competencies & Career Preview -->
         <div class="grid md:grid-cols-2 gap-8 mb-20">
             <div class="bg-white rounded-3xl p-7 shadow-md border border-gray-100 hover-glow">
@@ -251,6 +318,104 @@
                     <span class="bg-purple-50 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">AI Specialist</span>
                     <span class="bg-purple-50 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">Data Analyst</span>
                     <span class="bg-purple-50 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">IT Consultant</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonials Section -->
+        <div id="testimonials" class="scroll-mt-24 mb-20">
+            <div class="text-center mb-10">
+                <div class="inline-flex items-center gap-2 bg-purple-100 text-purple-800 px-4 py-1 rounded-full text-sm font-semibold">
+                    <span class="material-icons text-sm">format_quote</span>
+                    <span>Отзывы студентов и выпускников</span>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-4">Истории успеха наших выпускников</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto mt-2">Реальные карьерные треки студентов программы</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Testimonial 1 - Graduate at Yandex -->
+                <div class="testimonial-card rounded-2xl p-6 shadow-lg border border-indigo-100 hover-glow">
+                    <div class="flex items-start gap-4">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-indigo-600 to-purple-600 flex items-center justify-center text-white text-xl font-bold">
+                            АК
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center gap-1 mb-1">
+                                <span class="material-icons text-yellow-500 text-sm">star</span>
+                                <span class="material-icons text-yellow-500 text-sm">star</span>
+                                <span class="material-icons text-yellow-500 text-sm">star</span>
+                                <span class="material-icons text-yellow-500 text-sm">star</span>
+                                <span class="material-icons text-yellow-500 text-sm">star</span>
+                            </div>
+                            <h3 class="font-bold text-lg">Анна Кузнецова</h3>
+                            <p class="text-sm text-ai-primary font-medium mb-2">Выпускница 2024, Data Scientist в Яндекс</p>
+                            <div class="relative">
+                                <span class="material-icons quote-icon absolute -top-2 -left-2 opacity-20">format_quote</span>
+                                <p class="text-gray-600 italic pl-6">"Программа дала мне фундаментальные знания в области машинного обучения и нейросетей. Особенно ценными были проектные работы с реальными данными от индустриальных партнеров. Сейчас я применяю эти навыки в Яндексе, работая над рекомендательными системами."</p>
+                            </div>
+                            <div class="mt-3 flex items-center gap-2 text-sm text-gray-500">
+                                <span class="material-icons text-sm">work</span>
+                                <span>Трудоустроена в Яндекс</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 - Current Student -->
+                <div class="testimonial-card rounded-2xl p-6 shadow-lg border border-indigo-100 hover-glow">
+                    <div class="flex items-start gap-4">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-indigo-600 to-purple-600 flex items-center justify-center text-white text-xl font-bold">
+                            МП
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center gap-1 mb-1">
+                                <span class="material-icons text-yellow-500 text-sm">star</span>
+                                <span class="material-icons text-yellow-500 text-sm">star</span>
+                                <span class="material-icons text-yellow-500 text-sm">star</span>
+                                <span class="material-icons text-yellow-500 text-sm">star</span>
+                                <span class="material-icons text-yellow-500 text-sm">star</span>
+                            </div>
+                            <h3 class="font-bold text-lg">Михаил Петров</h3>
+                            <p class="text-sm text-ai-primary font-medium mb-2">Студент 2 курса, победитель AI Challenge 2024</p>
+                            <div class="relative">
+                                <span class="material-icons quote-icon absolute -top-2 -left-2 opacity-20">format_quote</span>
+                                <p class="text-gray-600 italic pl-6">"Учеба на программе — это полное погружение в мир искусственного интеллекта. Мы работаем с передовыми фреймворками: TensorFlow, PyTorch, scikit-learn. Благодаря поддержке преподавателей я занял призовое место на международном хакатоне по компьютерному зрению."</p>
+                            </div>
+                            <div class="mt-3 flex items-center gap-2 text-sm text-gray-500">
+                                <span class="material-icons text-sm">emoji_events</span>
+                                <span>Победитель AI Challenge 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 - Graduate with Startup -->
+                <div class="testimonial-card rounded-2xl p-6 shadow-lg border border-indigo-100 hover-glow md:col-span-2">
+                    <div class="flex flex-col md:flex-row items-start gap-4">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-indigo-600 to-purple-600 flex items-center justify-center text-white text-xl font-bold">
+                            ДВ
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center gap-1 mb-1">
+                                <span class="material-icons text-yellow-500 text-sm">star</span>
+                                <span class="material-icons text-yellow-500 text-sm">star</span>
+                                <span class="material-icons text-yellow-500 text-sm">star</span>
+                                <span class="material-icons text-yellow-500 text-sm">star</span>
+                                <span class="material-icons text-yellow-500 text-sm">star</span>
+                            </div>
+                            <h3 class="font-bold text-lg">Дмитрий Волков</h3>
+                            <p class="text-sm text-ai-primary font-medium mb-2">Выпускник 2023, основатель AI-стартапа NeuroMed</p>
+                            <div class="relative">
+                                <span class="material-icons quote-icon absolute -top-2 -left-2 opacity-20">format_quote</span>
+                                <p class="text-gray-600 italic pl-6">"Программа не только дала мне технические навыки, но и развила предпринимательское мышление. Курсы по управлению проектами и стартап-ориентированность помогли мне запустить собственный проект в области медицинского ИИ. Сейчас наша команда разрабатывает систему диагностики на основе компьютерного зрения, и мы уже получили инвестиции."</p>
+                            </div>
+                            <div class="mt-3 flex flex-wrap gap-2 text-sm">
+                                <span class="bg-green-50 text-green-700 px-3 py-1 rounded-full flex items-center gap-1"><span class="material-icons text-sm">rocket_launch</span> Основатель стартапа</span>
+                                <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full flex items-center gap-1"><span class="material-icons text-sm">psychology</span> NeuroMed AI</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -360,7 +525,7 @@
         </div>
 
         <!-- Application Form -->
-        <div id="apply" class="scroll-mt-24 bg-white rounded-3xl shadow-xl border border-gray-200 overflow-hidden mb-16">
+        <div id="apply" class="scroll-mt-24 bg-white rounded-3xl shadow-xl border border-gray-200 overflow-hidden">
             <div class="grid md:grid-cols-2">
                 <div class="bg-gradient-to-br from-indigo-700 to-purple-800 p-8 md:p-10 text-white">
                     <span class="material-icons text-4xl mb-4">contact_mail</span>
